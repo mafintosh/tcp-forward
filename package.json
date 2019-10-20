@@ -1,6 +1,6 @@
 {
   "name": "tcp-forward",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "TCP forwarding module that allow you to forward client connections and servers to a remote.",
   "main": "index.js",
   "bin": {
