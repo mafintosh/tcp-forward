@@ -12,6 +12,10 @@ r.on('forward-listening', function (port) {
   console.log('Tunnel listening and forwarding on port ' + port)
 })
 
+r.on('forward-close', function (port) {
+  console.log('Tunnel closed forwarding port ' + port)
+})
+
 r.listen(port())
 
 function port () {
