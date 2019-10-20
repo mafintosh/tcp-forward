@@ -1,0 +1,31 @@
+message Message {
+  message Connect {
+    required bytes topic = 1;
+  }
+
+  message Unlisten {
+    required bytes id = 1;
+  }
+
+  message Listen {
+    required bytes id = 1;
+    required bytes topic = 2;
+  }
+
+  message Listening {
+    required uint64 port = 1;
+  }
+
+  enum TYPE {
+    CONNECT = 1;
+    LISTEN = 2;
+    UNLISTEN = 3;
+    LISTENING = 4;
+    STREAM = 5;
+    PING = 6;
+    PONG = 7;
+  }
+
+  required TYPE type = 1;
+  optional bytes data = 2;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "tcp-forward",
+  "version": "0.0.0",
+  "description": "TCP forwarding module that allow you to forward client connections and servers to a remote.",
+  "main": "index.js",
+  "bin": {
+    "tcp-forward-server": "./server-bin.js"
+  },
+  "dependencies": {
+    "length-prefixed-message": "^3.0.4",
+    "protocol-buffers-encodings": "^1.1.0",
+    "pump": "^3.0.0",
+    "thunky": "^1.1.0"
+  },
+  "devDependencies": {
+    "protocol-buffers": "^4.1.0",
+    "standard": "^14.3.1"
+  },
+  "scripts": {
+    "protobuf": "protocol-buffers schema.proto -o lib/messages.js",
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/tcp-forward.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/tcp-forward/issues"
+  },
+  "homepage": "https://github.com/mafintosh/tcp-forward"
+}
